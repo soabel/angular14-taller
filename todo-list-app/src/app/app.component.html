@@ -353,25 +353,9 @@
 
   </div>
 
-  <!-- Resources -->
-  <h2>TODO LIST</h2>
 
-  <div class="task-add">
-    <input type="text" placeholder="Ingresar tarea" name="name" [(ngModel)]="newTask.name">
-    <button (click)="add()">Agregar</button>
-  </div>
+  <app-to-do></app-to-do>
 
-  <div>
-    Cantidad: {{list.length}}
-    <ng-container *ngFor="let item of list">
-      <div class="task-item" *ngIf="item"  >
-        <span>{{item.name}}</span>
-        <a (click)="delete(item)">Eliminar</a>
-      </div>
-    </ng-container>
-
-
-  </div>
 
 
 
