@@ -8,7 +8,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 export class ToDoComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
 AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
   ngAfterViewChecked(): void {
     console.log('ToDoComponent - AfterViewChecked');
@@ -25,6 +25,7 @@ AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
 
   list: any[] = [];
+  color= 'yellow';
 
   ngDoCheck(): void {
     console.log('ToDoComponent - DoCheck');

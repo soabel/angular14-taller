@@ -8,6 +8,11 @@ import { AppComponent } from './app.component';
 import { ToDoModule } from './to-do/to-do.module';
 import { TitleComponent } from './title/title.component';
 import { ToastrModule } from 'ngx-toastr';
+import { DirectivesModule } from './directives/directives.module';
+import { AuthModule } from './auth/auth.module';
+import { HomeModule } from './home/home.module';
+import { UsersModule } from './users/users.module';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +24,9 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     AppRoutingModule,
     ToDoModule,
+    AuthModule,
+    HomeModule,
+    UsersModule,
     ToastrModule.forRoot({
       timeOut: 2000
     })
