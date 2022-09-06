@@ -12,6 +12,7 @@ import { DirectivesModule } from './directives/directives.module';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { UsersModule } from './users/users.module';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -23,13 +24,14 @@ import { UsersModule } from './users/users.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ToDoModule,
+    // ToDoModule,
     AuthModule,
-    HomeModule,
+    // HomeModule,
     // UsersModule,
     ToastrModule.forRoot({
       timeOut: 2000
-    })
+    }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
