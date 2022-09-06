@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users/users.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { UsersDetailsComponent } from './users-details/users-details.component';
 
-
+let routes: Routes = [
+  {
+    path: '',
+    component: UsersComponent,
+    children: [
+      { path: ':id', component: UsersDetailsComponent }
+    ]
+  }
+]
 
 @NgModule({
   declarations: [
@@ -12,8 +20,12 @@ import { UsersDetailsComponent } from './users-details/users-details.component';
     UsersDetailsComponent
   ],
   imports: [
-    RouterModule,
+    RouterModule.forChild(routes),
     CommonModule
   ]
 })
-export class UsersModule { }
+export class UsersModule {
+  constructor() {
+    console.log('UsersModule');
+  }
+}

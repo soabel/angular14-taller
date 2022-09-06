@@ -24,4 +24,10 @@ import { DirectivesModule } from '../directives/directives.module';
   ],
   exports:[ToDoComponent]
 })
-export class ToDoModule { }
+export class ToDoModule {
+
+  constructor() {
+    console.log('ToDoModule');
+  }
+
+ }

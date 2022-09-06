@@ -15,4 +15,10 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[HomeComponent]
 })
-export class HomeModule { }
+export class HomeModule {
+
+  constructor(){
+    console.log('HomeModule');
+  }
+
+}

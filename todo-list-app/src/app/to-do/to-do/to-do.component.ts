@@ -7,6 +7,11 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 })
 export class ToDoComponent implements OnInit, OnChanges, DoCheck, AfterContentInit,
 AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+
+  constructor() {
+    console.log('ToDoComponent - constructor');
+  }
+
   ngOnDestroy(): void {
     // throw new Error('Method not implemented.');
   }

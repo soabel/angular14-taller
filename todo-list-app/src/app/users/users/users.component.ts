@@ -10,9 +10,13 @@ import { User } from 'src/app/models/user';
 export class UsersComponent implements OnInit {
 
   users: User[] = [];
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    console.log('UsersComponent','constructor');
+   }
 
   ngOnInit(): void {
+
+
     this.users.push({ id: 1, name: 'Alfredo' });
     this.users.push({ id: 2, name: 'Carlos' });
   }

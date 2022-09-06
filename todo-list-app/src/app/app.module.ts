@@ -26,7 +26,7 @@ import { UsersModule } from './users/users.module';
     ToDoModule,
     AuthModule,
     HomeModule,
-    UsersModule,
+    // UsersModule,
     ToastrModule.forRoot({
       timeOut: 2000
     })
