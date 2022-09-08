@@ -34,20 +34,19 @@ export class UserService {
   }
 
   find(): Observable<any> {
-    // let users: User[] = [];
-    // users.push({ id: 1, name: 'Alfredo' });
-    // users.push({ id: 2, name: 'Carlos' });
-    // return users;
-
     let url = `${environment.api}/user/find?pageSize=20`;
-
     return this.httpCliente.get(url, {});
-
 
   }
 
   create(user: User): Observable<any> {
     let url = `${environment.api}/user`;
     return this.httpCliente.post(url, user);
+  }
+
+  findById(id: number): Observable<User> {
+    let url = `${environment.api}/user/${id}`;
+
+    return this.httpCliente.get<User>(url);
   }
 }
