@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +13,7 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { UsersModule } from './users/users.module';
 import { HttpClientModule } from '@angular/common/http'
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -31,9 +32,11 @@ import { HttpClientModule } from '@angular/common/http'
     ToastrModule.forRoot({
       timeOut: 2000
     }),
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

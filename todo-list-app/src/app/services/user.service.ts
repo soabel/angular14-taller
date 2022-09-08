@@ -39,10 +39,15 @@ export class UserService {
     // users.push({ id: 2, name: 'Carlos' });
     // return users;
 
-    let url = `${environment.api}/user/find?pageSize=5`;
+    let url = `${environment.api}/user/find?pageSize=20`;
 
     return this.httpCliente.get(url, {});
 
 
+  }
+
+  create(user: User): Observable<any> {
+    let url = `${environment.api}/user`;
+    return this.httpCliente.post(url, user);
   }
 }

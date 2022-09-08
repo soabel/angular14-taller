@@ -1,0 +1,52 @@
+<div class="card ">
+  <div class="card-body">
+    <h4 class="card-title">Crear Usuario</h4>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+
+      <div class="mb-2">
+        <label for="" class="form-label">Nombres</label>
+        <input type="text" class="form-control" name="firstName" required [(ngModel)]="model.firstName"
+          aria-describedby="helpId" placeholder="" #firstName="ngModel">
+        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched) " class="alert alert-danger mt-1">
+          <div *ngIf="firstName.errors?.['required']">
+            Nombres es obligatorio
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" name="lastName"  [(ngModel)]="model.lastName"
+          aria-describedby="helpId" placeholder="">
+        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Usuario(login)</label>
+        <input type="text" class="form-control" name="userName" [(ngModel)]="model.userName" aria-describedby="helpId"
+          placeholder="">
+        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" aria-describedby="helpId"
+          placeholder="">
+        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Celular</label>
+        <input type="text" class="form-control" name="phone" [(ngModel)]="model.phone" aria-describedby="helpId"
+          placeholder="">
+        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+      </div>
+
+      <input name="" id="" class="btn btn-primary" [disabled]="!form.valid" type="submit" value="Guardar">
+
+      <!-- {{model | json}} -->
+
+    </form>
+
+  </div>
+</div>
