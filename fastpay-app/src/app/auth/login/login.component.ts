@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
         {
           next: (res: any) => {
             console.log('res', res);
-            this.router.navigate(['home', {}]);
+            this.router.navigateByUrl('');
           },
           error: (err: any) => console.error(err),
           complete: () => { }

@@ -17,13 +17,12 @@ export class HomeComponent implements OnInit {
     //   this.model.name = this.authService.authUser.name;
     // }
 
-    if (sessionStorage.getItem('authUser')) {
+    if (sessionStorage.getItem('authUser') && sessionStorage.getItem('authUser') != '') {
       let authUser = JSON.parse(sessionStorage.getItem('authUser')!!);
       this.model.name = authUser.name;
+    } else {
+      this.router.navigate(['auth', {}]);
     }
-
-
-
 
   }
 
