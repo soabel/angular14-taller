@@ -1,18 +1,27 @@
-<h2>Últimos movimientos</h2>
-
+<div class="last-moves-header">
+  <h3>Últimos movimientos</h3>
+</div>
 <div>
   <div class="form-balance">
-    <label><em class="fa-solid fa-eye"></em> <span> Mostrar saldo</span></label>
+    <label *ngIf="!showBalance" (click)="showBalance=true"><em class="fa-solid fa-eye"></em> <span> Mostrar
+        saldo</span></label>
+    <label *ngIf="showBalance">Saldo = {{balance}}</label>
   </div>
 </div>
 <div class="mt-3">
-  <div class="move-item" *ngFor="let move of moves">
+  <!-- <div class="move-item" *ngFor="let move of moves" [routerLink]="['/moves/details',{id: move.id}]"> -->
+  <div class="move-item" *ngFor="let move of moves" (click)="showDetails(move)" >
     <div class="name">
       <label>{{move.accountName}}</label>
       <span>{{move.date | date:'MMMM dd hh:mm'}}</span>
     </div>
     <div class="amount">
-      <span>${{move.amount}}</span>
+      <ng-container *ngIf="move.type=='credit'">
+        <span class="credit">${{move.amount}}</span>
+      </ng-container>
+      <ng-container *ngIf="move.type=='debit'">
+        <span class="debit">-${{move.amount!!}}</span>
+      </ng-container>
     </div>
   </div>
 </div>

@@ -13,16 +13,16 @@ export class CoreComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    // if (this.authService.authUser) {
-    //   this.model.name = this.authService.authUser.name;
-    // }
+
+    console.log('CoreComponent - ngOnInit');
 
     if (sessionStorage.getItem('authUser') && sessionStorage.getItem('authUser') != '') {
       let authUser = JSON.parse(sessionStorage.getItem('authUser')!!);
       this.model.name = authUser.name;
-    } else {
-      this.router.navigate(['auth', {}]);
     }
+    // else {
+    //   this.router.navigate(['auth', {}]);
+    // }
 
   }
 

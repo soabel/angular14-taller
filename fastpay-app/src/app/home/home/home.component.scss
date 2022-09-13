@@ -1,0 +1,14 @@
+.home-header{
+  background-color: #2d3e71;
+  color: #fff;
+}
+.home-buttons{
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+
+  & button {
+    width: 150px;
+  }
+}
