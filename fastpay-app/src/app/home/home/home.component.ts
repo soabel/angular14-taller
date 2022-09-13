@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Move } from 'src/app/models/move';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HomeComponent implements OnInit {
 
   model: any = {};
+  balance: number = 150.0;
+  showBalance = false;
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
@@ -24,6 +27,10 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['auth', {}]);
     }
 
+  }
+
+  pay():void{
+    this.router.navigateByUrl('/payments/add/contact-select');
   }
 
 

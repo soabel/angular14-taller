@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'moves',
     component: CoreComponent,canActivate: [AuthGuard], loadChildren: () => import('./moves/moves.module').then(m => m.MovesModule)
+  },
+  {
+    path: 'payments',
+    component: CoreComponent,canActivate: [AuthGuard], loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
   }
 ];
 

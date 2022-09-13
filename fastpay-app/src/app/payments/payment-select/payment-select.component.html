@@ -1,0 +1,11 @@
+<nav class="nav justify-content-center">
+  <a class="nav-link " href="#" aria-current="page">Contactos</a>
+  <a class="nav-link" href="#" aria-current="page">Pagos Pendientes</a>
+</nav>
+
+<div>
+  <div class="contact-item" *ngFor="let contact of contacts" (click)="add(contact)">
+    <label>{{contact.name}}</label>
+    <span>{{contact.phone}}</span>
+  </div>
+</div>

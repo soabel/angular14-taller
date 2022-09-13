@@ -1,6 +1,7 @@
 .home-header{
   background-color: #2d3e71;
   color: #fff;
+  padding: 4px;
 }
 .home-buttons{
  margin-bottom: 0px;
@@ -11,4 +12,13 @@
   & button {
     width: 150px;
   }
+}
+
+.last-moves-header{
+  background-color: #2d3e71;
+  color: #fff;
+}
+
+.last-moves-container{
+  padding: 5px;
 }
