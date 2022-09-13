@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-core',
+  templateUrl: './core.component.html',
+  styleUrls: ['./core.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CoreComponent implements OnInit {
 
   model: any = {};
   constructor(private authService: AuthService, private router: Router) { }
@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
     }
 
   }
-
 
 
 }

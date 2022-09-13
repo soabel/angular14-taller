@@ -1,0 +1,29 @@
+.form-balance{
+  display: flex;
+  gap: 4px;
+  vertical-align: middle;
+
+}
+
+.move-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & .name{
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      font-weight: 600;
+    }
+
+    & span{
+      color: #666;
+    }
+
+  }
+  & .amount{
+    display: flex;
+    align-items: center;
+  }
+}
