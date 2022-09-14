@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { User } from '../models/user';
 
+import { HttpClient } from '@angular/common/http'
+import { environment } from 'src/environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,19 +13,22 @@ export class AuthService {
 
   // public authUser?: User;
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
-  login(userName: string, password: string): Observable<User> {
+  login(userName: string, password: string): Observable<any> {
 
-    let result: User = { name: 'Alfredo Benaute', userName: 'alfredo', password: '123456', email: 'alfredo@gmail.com' };;
+    const data = { login: userName, password: password };
+    return this.httpClient.post(`${environment.apiUrl}/auth`, data);
 
-    if (userName == 'alfredo' && password == '123456') {
-      // this.authUser = result;
-      sessionStorage.setItem('authUser', JSON.stringify(result));
-      return of(result);
-    }
+    // let result: User = { name: 'Alfredo Benaute', userName: 'alfredo', password: '123456', email: 'alfredo@gmail.com' };;
 
-    return of();
+    // if (userName == 'alfredo' && password == '123456') {
+    //   // this.authUser = result;
+    //   sessionStorage.setItem('authUser', JSON.stringify(result));
+    //   return of(result);
+    // }
+
+    // return of();
 
   }
 }

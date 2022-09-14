@@ -1,4 +1,3 @@
-<p>login works!</p>
 
 <div class="d-flex justify-content-center">
 
@@ -7,16 +6,17 @@
     <form (ngSubmit)="onSubmit()" #form="ngForm">
       <div class="mb-2">
         <label for="" class="form-label">Usuario</label>
-        <input type="text" class="form-control" name="user" id="" aria-describedby="helpId" placeholder="" [(ngModel)]="model.userName">
-        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+        <input type="text" class="form-control" name="user" id="" aria-describedby="helpId" placeholder=""
+          [(ngModel)]="model.userName">
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Password</label>
-        <input type="text" class="form-control" name="password" id="" aria-describedby="helpId" placeholder="" [(ngModel)]="model.password">
-        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+        <input type="text" class="form-control" name="password" id="" aria-describedby="helpId" placeholder=""
+          [(ngModel)]="model.password">
       </div>
 
-      <button type="submit" class="btn btn-primary form-control">Ingresar <em class="fa-solid fa-circle-arrow-right"></em></button>
+      <button type="submit" class="btn btn-primary form-control">Ingresar <em
+          class="fa-solid fa-circle-arrow-right"></em></button>
     </form>
   </div>
 

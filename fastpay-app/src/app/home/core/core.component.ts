@@ -18,7 +18,9 @@ export class CoreComponent implements OnInit {
 
     if (sessionStorage.getItem('authUser') && sessionStorage.getItem('authUser') != '') {
       let authUser = JSON.parse(sessionStorage.getItem('authUser')!!);
-      this.model.name = authUser.name;
+
+      console.log(authUser);
+      this.model.name = authUser.firstName;
     }
     // else {
     //   this.router.navigate(['auth', {}]);
