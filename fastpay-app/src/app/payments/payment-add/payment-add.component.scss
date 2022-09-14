@@ -1,0 +1,23 @@
+.form-payment-add{
+  display: flex;
+  justify-content: center;
+
+  & div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 400px;
+    & span {
+      text-align: center;
+    }
+
+    & .accountName{
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+
+  }
+
+}

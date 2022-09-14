@@ -9,16 +9,17 @@ import { Contact } from 'src/app/models/contact';
 })
 export class PaymentSelectComponent implements OnInit {
 
-  contacts: Contact[] = [];
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.contacts.push({ name: 'Alex Espejo', phone: '987654321' });
-    this.contacts.push({ name: 'Carlos Ramos', phone: '123456789' });
+
   }
 
-  add(contact: Contact):void{
-    this.router.navigateByUrl('/payments/add/contact/1');
+
+  back():void{
+    this.router.navigateByUrl('/');
   }
+
 
 }

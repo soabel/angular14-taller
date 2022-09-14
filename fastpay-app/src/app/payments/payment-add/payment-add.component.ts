@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-payment-add',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit():void{
+    this.toastr.info('Pago realizado');
+    this.router.navigateByUrl('/');
+  }
+
+  back():void{
+    this.router.navigateByUrl('/payments/add/contact-select');
   }
 
 }

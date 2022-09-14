@@ -1,0 +1,7 @@
+
+<div>
+  <div class="contact-item" *ngFor="let contact of contacts" (click)="select(contact)">
+    <label>{{contact.name}}</label>
+    <span>{{contact.phone}}</span>
+  </div>
+</div>
