@@ -36,7 +36,7 @@ export class LoginReactiveComponent implements OnInit {
       {
         next: (res) => {
           console.log(res);
-          sessionStorage.setItem('authUser', JSON.stringify(res.usuario));
+          sessionStorage.setItem('authUser', JSON.stringify(res));
 
           if (!this.urlRedirect) {
             this.router.navigateByUrl('');

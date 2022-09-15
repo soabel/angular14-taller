@@ -4,11 +4,17 @@
   <h3>Últimos movimientos</h3>
 </div>
 
-<div>
+<div class="balance">
   <div class="form-balance">
-    <label *ngIf="!showBalance" (click)="showBalance=true"><em class="fa-solid fa-eye"></em> <span> Mostrar
-        saldo</span></label>
-    <label *ngIf="showBalance">Saldo = {{balance}}</label>
+    <label *ngIf="!showBalance" (click)="showBalance=true"><em class="fa-solid fa-eye"></em>  Mostrar
+        saldo</label>
+
+    <div class="balance__show" *ngIf="showBalance">
+      <label (click)="showBalance=false"><em class="fa-solid fa-eye-slash"></em>  Ocultar
+          saldo</label>
+      <span>${{balance}}</span>
+    </div>
+
   </div>
 </div>
 
@@ -20,4 +26,3 @@
   <button class="btn btn-secondary"><em class="fa-solid fa-hand-holding-dollar"></em> Cobrar</button>
   <button class="btn btn-primary" (click)="pay()"><em class="fa-regular fa-paper-plane"></em> Pagar</button>
 </div>
-

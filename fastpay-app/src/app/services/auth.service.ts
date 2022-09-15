@@ -17,8 +17,10 @@ export class AuthService {
 
   login(userName: string, password: string): Observable<any> {
 
-    const data = { login: userName, password: password };
-    return this.httpClient.post(`${environment.apiUrl}/auth`, data);
+    const data = { userName: userName, password: password };
+    return this.httpClient.post(`${environment.apiUrl}/users/authenticate`, data);
+
+
 
     // let result: User = { name: 'Alfredo Benaute', userName: 'alfredo', password: '123456', email: 'alfredo@gmail.com' };;
 

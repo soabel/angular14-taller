@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:'https://gestion-minera-api.azurewebsites.net/api'
+  apiUrl:'https://dasser-yape-api.azurewebsites.net/api'
 };
 
 /*
